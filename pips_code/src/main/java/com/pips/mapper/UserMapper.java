@@ -1,12 +1,10 @@
-package com.pips.dao;
+package com.pips.mapper;
 
 import com.pips.pojo.User;
-import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
-@Mapper
 @Repository
-public interface UserDao {
+public interface UserMapper {
     User getUserById(String id);
 
     void addUser(User user);

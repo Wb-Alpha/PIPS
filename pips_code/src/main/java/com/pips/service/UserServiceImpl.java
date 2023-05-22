@@ -1,14 +1,17 @@
 package com.pips.service;
 
-import com.pips.dao.UserDao;
-import com.pips.dao.UserDaoImpl;
+import com.pips.mapper.UserMapper;
 import com.pips.pojo.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserServiceImpl implements UserService{
-    UserDaoImpl userDao = new UserDaoImpl();
+    @Autowired
+    private UserMapper userMapper;
 
     @Override
     public User queryUserById(String id) {
-        return userDao.getUserById(id);
+        return userMapper.getUserById(id);
     }
 }

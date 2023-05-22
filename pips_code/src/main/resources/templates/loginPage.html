@@ -6,8 +6,13 @@
 </head>
 <body>
     <form action="/login">
-        <input name="id" type="text"/>
-        <input name="psw" type="password"/>
+        <label>
+            <input name="id" type="text"/>
+        </label>
+        <label>
+            <input name="password" type="password"/>
+        </label>
+        <p>${msg}</p>
         <input type="submit">
     </form>
 </body>
