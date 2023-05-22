@@ -18,7 +18,7 @@ public class UserController {
 
     @RequestMapping("/login")
     public String login(Model model, HttpSession session, String id, String password){
-        User user = userService.queryUserById(id);
+        User user =     userService.queryUserById(id);
         if (user==null){
             model.addAttribute("msg","没有此账户");
             return "loginPage";

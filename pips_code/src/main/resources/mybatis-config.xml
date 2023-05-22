@@ -19,4 +19,8 @@
         </environment>
     </environments>
 
+    <mappers>
+        <package name="com.pips.mapper"/>
+    </mappers>
+
 </configuration>
