@@ -1,7 +1,9 @@
 spring:
   datasource:
-    url: "jdbc:mysql://localhost:3306/mybatis?
-                    useSSL=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"
+    url: "jdbc:mysql://localhost:3306/pips?useSSL=true&useUnicode=true&characterEncoding=UTF-8"
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+  mvc:
+    static-path-pattern: /**

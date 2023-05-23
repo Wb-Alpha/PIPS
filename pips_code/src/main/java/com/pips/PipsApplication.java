@@ -14,18 +14,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Date;
 
 
 @SpringBootApplication
 @MapperScan("com.pips.mapper")
 public class PipsApplication {
     public static void main(String[] args) throws IOException {
-        InputStream in = Resources.getResourceAsStream("mybatis-config.xml");
-        SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
-        SqlSessionFactory factory = builder.build(in);
-        SqlSession session = factory.openSession();
-        UserMapper userMapper = session.getMapper(UserMapper.class);
-        User user = userMapper.getUserById("admin");
+        Date date = new Date();
+        System.out.println(date);
         SpringApplication.run(PipsApplication.class, args);
     }
 }
