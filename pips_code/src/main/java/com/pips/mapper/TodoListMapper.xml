@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pips.mapper.TodoListMapper">
+    <select id="getListById" parameterType="java.lang.String" resultType="com.pips.pojo.TodoList">
+        select * from pips.todo_list where list_id=#{list_id};
+    </select>
+
+    <select id="getAllLists" resultType="com.pips.pojo.TodoList">
+        select * from pips.todo_list;
+    </select>
+</mapper>

@@ -39,8 +39,4 @@ public class TodoListController {
         model.addAttribute("idListMap", idListMap);
         return "todoList/mainPage";
     }
-
-
-
-
 }

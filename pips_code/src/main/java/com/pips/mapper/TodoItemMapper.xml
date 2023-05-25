@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pips.mapper.TodoItemMapper">
+    <resultMap id="itemMap" type="com.pips.pojo.TodoItem">
+        <id property="itemId" column="item_id"/>
+        <result property="itemName" column="item_name"/>
+        <result property="startTime" column="start_time"/>
+        <result property="endTime" column="end_time"/>
+        <result property="belongList" column="belong_list"/>
+        <result property="addToClock" column="add_to_clock"/>
+    </resultMap>
+    <select id="selectDisplayItemById" parameterType="java.lang.String" resultMap="itemMap">
+        select item_id, item_name, start_time, end_time, belong_list, `repeat`,
+               add_to_clock, priority, intro, finish from pips.todo_item where finish=false and belong_list=#{id};
+    </select>
+</mapper>

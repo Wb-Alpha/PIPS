@@ -9,7 +9,7 @@ import java.util.List;
 public interface TodoListService {
     public void createTodoList(TodoList todoList);
 
-    public void deleteTodoList(TodoList todoList);
+    public void deleteTodoListById(String id);
 
     public TodoList findListById(String id);
 

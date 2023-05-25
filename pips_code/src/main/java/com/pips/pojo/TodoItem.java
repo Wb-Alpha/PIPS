@@ -13,12 +13,13 @@ public class TodoItem {
     private boolean addToClock;
     private Integer priority;
     private String intro;
+    private boolean finish;
 
     public TodoItem() {
     }
 
     public TodoItem(String itemId, String itemName, Date startTime, Date endTime, String belongList,
-                    String repeat, boolean addToClock, Integer priority, String intro) {
+                    String repeat, boolean addToClock, Integer priority, boolean finish, String intro) {
         this.itemId = itemId;
         this.itemName = itemName;
         this.startTime = startTime;
@@ -28,6 +29,7 @@ public class TodoItem {
         this.addToClock = addToClock;
         this.priority = priority;
         this.intro = intro;
+        this.finish = finish;
     }
 
     public String getItemId() {
@@ -102,6 +104,14 @@ public class TodoItem {
         this.intro = intro;
     }
 
+    public boolean isFinish() {
+        return finish;
+    }
+
+    public void setFinish(boolean finish) {
+        this.finish = finish;
+    }
+
     @Override
     public String toString() {
         return "TodoItem{" +
@@ -114,6 +124,7 @@ public class TodoItem {
                 ", addToClock=" + addToClock +
                 ", priority=" + priority +
                 ", intro='" + intro + '\'' +
+                ", finish=" + finish +
                 '}';
     }
 }
