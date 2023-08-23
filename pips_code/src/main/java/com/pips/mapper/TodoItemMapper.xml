@@ -13,4 +13,8 @@
         select item_id, item_name, start_time, end_time, belong_list, `repeat`,
                add_to_clock, priority, intro, finish from pips.todo_item where finish=false and belong_list=#{id};
     </select>
+    <insert id="addItem" parameterType="com.pips.pojo.TodoItem">
+        insert pips.todo_item(item_id, item_name, start_time, end_time, belong_list, `repeat`, add_to_clock, priority, intro, finish)
+        VALUES (#{itemId}, #{itemName}, #{startTime}, #{endTime}, {belongList}, #{repeat}, #{addToClock}, #{priority}, #{intro}, #{finish})
+    </insert>
 </mapper>

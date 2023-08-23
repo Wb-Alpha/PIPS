@@ -8,4 +8,12 @@
     <select id="getAllLists" resultType="com.pips.pojo.TodoList">
         select * from pips.todo_list;
     </select>
+
+    <insert id="addTodoList" parameterType="com.pips.pojo.TodoList">
+        insert pips.todo_list(list_id, list_name, intro) values (#{list_id},#{list_name},#{intro});
+    </insert>
+
+    <delete id="deleteTodoList" parameterType="java.lang.String">
+        delete from pips.todo_list where list_id=#{id};
+    </delete>
 </mapper>

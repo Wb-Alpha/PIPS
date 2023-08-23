@@ -27,7 +27,7 @@ public class TodoItemServiceImpl implements TodoItemService {
 
     @Override
     public void addItem(TodoItem item) {
-
+        todoItemMapper.addItem(item);
     }
 
     @Override
@@ -42,7 +42,6 @@ public class TodoItemServiceImpl implements TodoItemService {
 
     @Override
     public List<TodoItem> findDisplayItemById(String id, Date nowTime) {
-        System.out.println(nowTime);
         return todoItemMapper.selectDisplayItemById(id, nowTime);
     }
 

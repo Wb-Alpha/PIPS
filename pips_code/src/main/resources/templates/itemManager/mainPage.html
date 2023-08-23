@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MainPage</title>
+<!--    <link rel="stylesheet" href="../../static/css/main.css">-->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        .el-row {
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .el-col {
+            border-radius: 4px;
+        }
+        .bg-purple-dark {
+            background: #99a9bf;
+        }
+        .bg-purple {
+            background: #d3dce6;
+        }
+        .bg-purple-light {
+            background: #e5e9f2;
+        }
+        .grid-content {
+            border-radius: 4px;
+            min-height: 36px;
+        }
+        .row-bg {
+            padding: 10px 0;
+            background-color: #f9fafc;
+        }
+    </style>
+</head>
+<body>
+    <div id="root" style="height:100vh; width: 100%">
+        <div>
+            <el-menu class="el-menu-demo" mode="horizontal" >
+                <el-menu-item style="font-size: 20px">个人信息处理系统</el-menu-item>
+            </el-menu>
+        </div>
+        <el-row>
+            <el-col :span="24"><div class="grid-content bg-purple-dark"></div></el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
+            <el-col :span="12"><div class="grid-content bg-purple-light"></div></el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
+            <el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>
+            <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+            <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+            <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+            <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
+            <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+            <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
+            <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+            <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
+            <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+        </el-row>
+
+<!--        <div style="height: 90%">-->
+<!--            <el-row style="height:100%">-->
+<!--                <el-col :span="4" style="height: 100%;"></el-col>-->
+<!--                <el-col :span="4" style="border:5px solid red;height: 100%;background-color: rebeccapurple">-->
+<!--                    <h2>物品清单</h2>-->
+<!--                    <el-table th:each="list:${allList}">-->
+<!--                        <el-table-column th:text="${list.getListName()}"></el-table-column>-->
+<!--                    </el-table>-->
+<!--                </el-col>-->
+<!--                <el-col :span="12" style="border:5px solid blue;height: 100%;background-color: azure">-->
+
+<!--                </el-col>-->
+<!--                <el-col :span="4"></el-col>-->
+
+<!--        </div>-->
+    </div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<!-- import JQuery -->
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script>
+    let list
+    // window.onload=function () {
+    //     list = $('#allList').val();
+    // }
+    $(document).ready(function(){
+        list = $('#allList').val();
+        console.log(list)
+    });
+</script>
+</html>

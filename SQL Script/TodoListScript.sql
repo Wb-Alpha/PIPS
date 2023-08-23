@@ -1,4 +1,3 @@
-create pips;
 
 use pips;
 

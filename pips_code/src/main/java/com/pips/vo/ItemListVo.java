@@ -10,16 +10,16 @@ public class ItemListVo {
     private String list_id;
     private String list_name;
     private String intro;
-    private Collection<TodoItem> itemList;
+    private Collection<TodoItemVo> itemVoList;
 
     public ItemListVo() {
     }
 
-    public ItemListVo(String list_id, String list_name, String intro, Collection<TodoItem> itemList) {
+    public ItemListVo(String list_id, String list_name, String intro, Collection<TodoItemVo> itemVoList) {
         this.list_id = list_id;
         this.list_name = list_name;
         this.intro = intro;
-        this.itemList = itemList;
+        this.itemVoList = itemVoList;
     }
 
     public String getList_id() {
@@ -46,12 +46,12 @@ public class ItemListVo {
         this.intro = intro;
     }
 
-    public Collection<TodoItem> getItemList() {
-        return itemList;
+    public Collection<TodoItemVo> getItemVoList() {
+        return itemVoList;
     }
 
-    public void setItemList(Collection<TodoItem> itemList) {
-        this.itemList = itemList;
+    public void setItemVoList(Collection<TodoItemVo> itemVoList) {
+        this.itemVoList = itemVoList;
     }
 
     @Override
@@ -60,7 +60,7 @@ public class ItemListVo {
                 "list_id='" + list_id + '\'' +
                 ", list_name='" + list_name + '\'' +
                 ", intro='" + intro + '\'' +
-                ", itemList=" + itemList +
+                ", itemVoList=" + itemVoList +
                 '}';
     }
 }

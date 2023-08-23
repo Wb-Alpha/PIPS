@@ -16,12 +16,12 @@ public class TodoListServiceImpl implements TodoListService {
 
     @Override
     public void createTodoList(TodoList todoList) {
-
+        todoListMapper.addTodoList(todoList);
     }
 
     @Override
     public void deleteTodoListById(String id) {
-
+        todoListMapper.deleteTodoList(id);
     }
 
     @Override
